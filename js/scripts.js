@@ -60,5 +60,14 @@ const hadesDatabase = [
         needs: ["Divine Strike", "Divine Flourish", "Divine Dash", "Holy Shield"]
       }
     ]
+  },
+  {
+    prophecy: "Vicious Cycle",
+    requirements: [
+      {
+        boon: "Black Metal or Engulfing Vortex",
+        needs: ["Slicing Flare", "Slicing Shot", "Blade Dash", "Ares' Aid"]
+      }
+    ]
   }
 ]
