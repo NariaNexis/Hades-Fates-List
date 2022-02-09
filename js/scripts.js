@@ -80,5 +80,32 @@ const hadesDatabase = [
         needs: ["Flurry Cast", "Quick Reload", "Lambent Plume"]
       }
     ]
+  },
+  {
+    prophecy: "Bad News",
+    requirements: [
+      {
+        boon: "Stygian Soul Mirror Ability"
+      },
+      {
+        needs: ["Auto Reload", "Lambent Plume"]
+      }
+    ]
+  },
+  {
+    prophecy: "Winter Harvest",
+    requirements: [
+      {
+        boon: "Killing Freeze",
+        needs: ["Frost Strike", "Frost Flourish", "Mistral Dash", "Demeter's Aid", "Snow Burst"]
+      },
+      {
+        boon: "Arctic Blast",
+        needs: ["Frost Strike", "Frost Flourish", "Mistral Dash", "Demeter's Aid", "Snow Burst"]
+      },
+      {
+        boon: "Ravenous Will"
+      }
+    ]
   }
 ]
