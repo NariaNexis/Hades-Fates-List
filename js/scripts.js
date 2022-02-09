@@ -69,5 +69,16 @@ const hadesDatabase = [
         needs: ["Slicing Flare", "Slicing Shot", "Blade Dash", "Ares' Aid"]
       }
     ]
+  },
+  {
+    prophecy: "Greater Recall",
+    requirements: [
+      {
+        boon: "Infernal Soul Mirror Ability"
+      },
+      {
+        needs: ["Flurry Cast", "Quick Reload", "Lambent Plume"]
+      }
+    ]
   }
 ]
