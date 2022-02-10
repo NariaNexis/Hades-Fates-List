@@ -3,8 +3,8 @@ function getBoon(i) {
 
   let boonList = ""
 
-  for (let j = 0; j < hadesDatabase[i].requirements.length; j++) {
-    let list = hadesDatabase[i].requirements
+  for (let j = 0; j < legendDatabase[i].requirements.length; j++) {
+    let list = legendDatabase[i].requirements
     boonList += "<li>" + list[j].boon + "</li>"
   }
 
@@ -14,12 +14,12 @@ function getBoon(i) {
 
 $(document).ready(function() {
 
-  for (let i = 0; i < hadesDatabase.length; i++) {
+  for (let i = 0; i < legendDatabase.length; i++) {
     $("#accordionPanelsStayOpenExample").append(
       `<div class="accordion-item">
         <h2 class="accordion-header" id="panelsStayOpen-heading${i}">
           <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse${i}" aria-expanded="true" aria-controls="panelsStayOpen-collapse${i}">
-            ${hadesDatabase[i].prophecy}
+            ${legendDatabase[i].legendaryBoon}
           </button>
         </h2>
         <div id="panelsStayOpen-collapse${i}" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-heading${i}">
@@ -34,78 +34,59 @@ $(document).ready(function() {
   }
 });
 
-
-const hadesDatabase = [
+const prophecyDatabase = [
   {
-    prophecy: "Fully Loaded",
-    requirements: [
-      {
-        boon: "Support Fire",
-        needs: ["Deadly Strike", "Deadly Flourish", "True Shot", "Hunter Dash", "Artemis' Aid", "Pressure Points"]
-      },
-      {
-        boon: "Exit Wounds",
-        needs: ["Crush Shot", "True Shot", "Phalanx Shot", "Flood Shot", "Electric Shot"]
-      },
-      {
-        boon: "Pressure Points"
-      }
-    ]
+    prophecy: "Power without Equal",
+    legendaryBoons: [1],
+    duoBoons: false
   },
   {
-    prophecy: "Divine Protection",
-    requirements: [
-      {
-        boon: "Brilliant Riposte",
-        needs: ["Divine Strike", "Divine Flourish", "Divine Dash", "Holy Shield"]
-      }
-    ]
-  },
-  {
-    prophecy: "Vicious Cycle",
-    requirements: [
-      {
-        boon: "Black Metal or Engulfing Vortex",
-        needs: ["Slicing Flare", "Slicing Shot", "Blade Dash", "Ares' Aid"]
-      }
-    ]
-  },
-  {
-    prophecy: "Greater Recall",
-    requirements: [
-      {
-        boon: "Infernal Soul Mirror Ability"
-      },
-      {
-        needs: ["Flurry Cast", "Quick Reload", "Lambent Plume"]
-      }
-    ]
-  },
-  {
-    prophecy: "Bad News",
-    requirements: [
-      {
-        boon: "Stygian Soul Mirror Ability"
-      },
-      {
-        needs: ["Auto Reload", "Lambent Plume"]
-      }
-    ]
-  },
-  {
-    prophecy: "Winter Harvest",
-    requirements: [
-      {
-        boon: "Killing Freeze",
-        needs: ["Frost Strike", "Frost Flourish", "Mistral Dash", "Demeter's Aid", "Snow Burst"]
-      },
-      {
-        boon: "Arctic Blast",
-        needs: ["Frost Strike", "Frost Flourish", "Mistral Dash", "Demeter's Aid", "Snow Burst"]
-      },
-      {
-        boon: "Ravenous Will"
-      }
-    ]
+    prophecy: "Vengeful Mood",
+    legendaryBoons: false,
+    duoBoons: [1]
   }
 ]
+
+const duoBoons = {
+
+};
+
+const legendaryBoons = {
+  0: {
+      legendaryBoon: "none",
+      requiredBoons: [0]
+     },
+  1: {
+      legendaryBoon: "Fully Loaded",
+      requiredBoons: [1,2,3]
+     }
+}
+
+const boons = {
+  0: {
+      boon: "none",
+      requiredNeeds: [0] 
+     },
+  1: {
+      boon: "Exit Wounds",
+      requiredNeeds: [1,6]
+     },
+  2: {
+      boon: "Pressure Points",
+      requiredNeeds: [0]
+     },
+  3: {
+      boon: "Support Fire",
+      requiredNeeds: [1,2,3,4,5]
+     }
+};
+
+const needs = {
+  0: "none",
+  1: "deadly strike",
+  2: "True Shot",
+  3: "Hunter Dash",
+  4: "Artemis's Aid",
+  5: "Pressure Points",
+  6: "Crushing shot"
+};
