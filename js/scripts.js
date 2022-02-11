@@ -1,31 +1,31 @@
 
-function getBoon(i) {
+function getBoonList(prophecy) {
 
-  let boonList = ""
-
-  for (let j = 0; j < legendDatabase[i].requirements.length; j++) {
-    let list = legendDatabase[i].requirements
-    boonList += "<li>" + list[j].boon + "</li>"
+  for (const property in prophecy) {
+    if (prophecy[property] !== false) {
+      //now at ex [1,2]
+      // make a loop for the array
+      // connect it to the legendaryBoons database
+    }
   }
-
-  return boonList;
+ 
 
 }
 
 $(document).ready(function() {
 
-  for (let i = 0; i < legendDatabase.length; i++) {
+  for (let i = 0; i < prophecyDatabase.length; i++) {
     $("#accordionPanelsStayOpenExample").append(
       `<div class="accordion-item">
         <h2 class="accordion-header" id="panelsStayOpen-heading${i}">
           <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse${i}" aria-expanded="true" aria-controls="panelsStayOpen-collapse${i}">
-            ${legendDatabase[i].legendaryBoon}
+            ${prophecyDatabase[i].prophecy}
           </button>
         </h2>
         <div id="panelsStayOpen-collapse${i}" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-heading${i}">
           <div class="accordion-body">
             <ol>
-              ${getBoon(i)}
+              ${getBoonList(prophecyDatabase[i].prophecy)}
             </ol>
           </div>
         </div>
@@ -37,7 +37,7 @@ $(document).ready(function() {
 const prophecyDatabase = [
   {
     prophecy: "Power without Equal",
-    legendaryBoons: [1],
+    legendaryBoons: [1,2],
     duoBoons: false
   },
   {
@@ -59,6 +59,10 @@ const legendaryBoons = {
   1: {
       legendaryBoon: "Fully Loaded",
       requiredBoons: [1,2,3]
+     },
+  2: {
+      legendaryBoon: "Divine Projection",
+      requiredBoons: [4]
      }
 }
 
@@ -78,8 +82,13 @@ const boons = {
   3: {
       boon: "Support Fire",
       requiredNeeds: [1,2,3,4,5]
+     },
+  4: {
+      boon: "Brilliant Reposte",
+      requiredNeeds: [0]
      }
 };
+
 
 const needs = {
   0: "none",
