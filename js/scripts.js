@@ -37,7 +37,7 @@ $(document).ready(function() {
 const prophecyDatabase = [
   {
     prophecy: "Power without Equal",
-    legendaryBoons: [1,2],
+    legendaryBoons: [1,2,3,4,5,6],
     duoBoons: false
   },
   {
@@ -48,7 +48,10 @@ const prophecyDatabase = [
 ]
 
 const duoBoons = {
-
+  0: {
+      duoBoon: "none",
+      requiredBoons: [0]
+     }
 };
 
 const legendaryBoons = {
@@ -63,6 +66,22 @@ const legendaryBoons = {
   2: {
       legendaryBoon: "Divine Projection",
       requiredBoons: [4]
+     },
+  3: {
+      legendaryBoon: "Vicious Cycle",
+      requiredBoons: [5]
+     },
+  4: {
+      legendaryBoon: "Bad News",
+      requiredBoons: [6]
+     },
+  5: {
+      legendaryBoon: "Greater Recall",
+      requiredBoons: [7]
+     },
+  6: {
+      legendaryBoon: "Winter Harvest",
+      requiredBoons: [8,9,10]
      }
 }
 
@@ -92,13 +111,25 @@ const boons = {
       requiredNeeds: [15,16,17,18]
      },
   6: {
+      boon: "Bad News",
+      requiredNeeds: [19,22,24]
+     },
+  7: {
       boon: "Greater Recall",
       requiredNeeds: [20,21,22,23]
      },
-  7: {
-      boon: "Bad News",
-      requiredNeeds: [19,22,24]
-     }
+  8: {
+      boon: "Arctic Blast",
+      requiredNeeds: [25,26,27,28,29]
+     },
+  9: {
+      boon: "Killing Freeze",
+      requiredNeeds: [25,26,27,28,29]
+     },
+  10: {
+       boon: "Ravenous Will",
+       requiredNeeds: [0]
+      }
 };
 
 
@@ -132,5 +163,13 @@ const needs = {
   26: "Frost Flourish",
   27: "Frost Strike",
   28: "Mistral Dash",
-  29: "Snow Burst"
+  29: "Snow Burst",
+  30: "Trippy Shot",
+
+  31: "Electric Shot",
+  32: "Lightning Strike",
+  33: "Thunder Dash",
+  34: "Thunder Flare",
+  35: "Thunder Flourish",
+  35: "Zeus' Aid"
 };
