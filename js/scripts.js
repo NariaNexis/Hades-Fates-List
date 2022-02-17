@@ -41,7 +41,7 @@ const prophecyDatabase = [
     duoBoons: false
   },
   {
-    prophecy: "Vengeful Mood",
+    prophecy: "Divine Pairing",
     legendaryBoons: false,
     duoBoons: [1]
   }
@@ -50,8 +50,44 @@ const prophecyDatabase = [
 const duoBoons = {
   0: {
       duoBoon: "none",
-      requiredBoons: [0]
-     }
+      requiredNeeds: [0]
+     },
+  1: {
+      duoBoon: "Scintillating Feast",
+      requiredNeeds: [31,32,34,35,40]
+     },
+  2: {
+       duoBoon: "Vengeful Mood",
+       requiredNeeds: [30,31,32,33,34,35,41,42,43,44,45,46]
+     },
+  3: {
+      duoBoon: "Lightning Phalanx",
+      requiredNeeds: [8,31,32,34,35]
+     },
+  4: {
+      duoBoon: "Merciful End",
+      requiredNeeds: [12,13,43,44]
+     },
+  5: {
+      duoBoon: "Low Tolerance",
+      requiredNeeds: [36,37,38,39,51,52,53,54]
+     },
+  6: {
+      duoBoon: "Blizzard Shot",
+      requiredNeeds: [56,57,58,59,60]
+     },
+  7: {
+      duoBoon: "Cold Embrace",
+      requiredNeeds: [50,52,53,54,55]
+     },
+  8: {
+      duoBoon: "Freezing Vortex",
+      requiredNeeds: [45,46,56,57,58,59]
+     },
+  9: {
+      duoBoon: "Splitting Headache",
+      requiredNeeds: [1,3,4,10,36,37,38,39]
+     },
 };
 
 const legendaryBoons = {
